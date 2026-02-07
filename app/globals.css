@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-gengar-dark: #1A0F2E;
+  --color-gengar-body: #2D1B4E;
+  --color-gengar-mid: #59458D;
+  --color-gengar-light: #8B6FAE;
+  --color-gengar-lavender: #D6BCFA;
+  --color-gengar-bright: #F0E6FF;
+  --color-gengar-red: #E53E3E;
+  --color-gengar-red-hover: #FC8181;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--color-gengar-dark);
+  color: var(--color-gengar-lavender);
+  font-family: Arial, Helvetica, sans-serif;
+}
