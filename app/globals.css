@@ -1,21 +1,73 @@
 @import "tailwindcss";
 
-@theme inline {
-  --color-gengar-dark: #1A0F2E;
-  --color-gengar-body: #2D1B4E;
-  --color-gengar-mid: #59458D;
-  --color-gengar-light: #8B6FAE;
-  --color-gengar-lavender: #D6BCFA;
-  --color-gengar-bright: #F0E6FF;
-  --color-gengar-red: #E53E3E;
-  --color-gengar-red-hover: #FC8181;
+@font-face {
+  font-family: "Cascadia Mono NF";
+  src: url("/fonts/CascadiaMonoNF.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: "Cascadia Mono NF";
+  src: url("/fonts/CascadiaMonoNFItalic.woff2") format("woff2");
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme inline {
+  --color-gengar-dark: #1a0f2e;
+  --color-gengar-body: #2d1b4e;
+  --color-gengar-mid: #59458d;
+  --color-gengar-light: #8b6fae;
+  --color-gengar-lavender: #d6bcfa;
+  --color-gengar-bright: #f0e6ff;
+  --color-gengar-peach: #e8956a;
+  --color-gengar-peach-hover: #f2b896;
+  --color-gengar-gray: #6b6b7b;
+  --color-bulbasaur-teal: #5abfad;
+  --color-bulbasaur-green: #78cc6e;
+  --color-bulbasaur-green-hover: #a3e89a;
+
+  --font-mono: "Cascadia Mono NF", ui-monospace, monospace;
 }
 
 body {
   background: var(--color-gengar-dark);
   color: var(--color-gengar-lavender);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-mono);
+}
+
+/* Terminal window */
+.terminal {
+  box-shadow:
+    0 0 0 1px rgba(89, 69, 141, 0.3),
+    0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Terminal lines */
+.terminal-line {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* Blinking block cursor */
+.cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.15em;
+  vertical-align: text-bottom;
+  background: var(--color-gengar-lavender);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Selection styling to match terminal feel */
+::selection {
+  background: var(--color-gengar-mid);
+  color: var(--color-gengar-bright);
 }
