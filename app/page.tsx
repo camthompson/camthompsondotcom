@@ -82,7 +82,7 @@ export default function Home() {
             <Prompt />
             <span className="text-gengar-bright">whoami</span>
           </div>
-          <div className="terminal-line">🪵 🐂 ❤️‍🔥 🐇 🐉 🐢 🦐 🍑 🐕 ⚽ 🚴 🏃 🏋️ 🎮</div>
+          <div className="terminal-line">🪵 🐂 ❤️‍🔥 🐇 🌎 🐉 🐢 🦐 🍑 🐕 🥔 🫛 ⚽ 🚴 🏃</div>
 
           {/* Blank line */}
           <div className="terminal-line">&nbsp;</div>
