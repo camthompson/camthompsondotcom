@@ -10,7 +10,6 @@ const commands = [
   "kubectl get deploy -A",
   "terraform apply",
   "gh pr review",
-  "psql",
   "git init frontend-monorepo",
 ].sort(() => Math.random() - 0.5) as string[]; // Shuffle commands randomly
 
